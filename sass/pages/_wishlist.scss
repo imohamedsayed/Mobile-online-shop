@@ -1,0 +1,15 @@
+@use "../helpers/mixins" as *;
+.wish-box {
+  .card {
+    .card-body {
+      .heartBtn {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        @include circling(30px);
+        cursor: pointer;
+        color: red;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use "../helpers//variables" as *;
+@use "../helpers//mixins" as *;
+
+.navigator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #fff;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  div {
+    cursor: pointer;
+    &:hover {
+      svg {
+        color: $skin-color1;
+      }
+    }
+  }
+  svg {
+    color: #999;
+    font-size: 30px;
+    transition: all 0.3s ease;
+  }
+  .nav-cart {
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    top: -25px;
+    width: 14%;
+    height: 120%;
+    display: grid;
+    place-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #ececec;
+    svg {
+      color: $skin-color1;
+    }
+  }
+}

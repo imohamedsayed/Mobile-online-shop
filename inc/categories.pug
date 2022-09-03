@@ -1,0 +1,8 @@
+include mixins
+-var images = ['mobile.svg','pc.svg','tablet.svg','headset.svg','labtop.svg','watch.svg'];
+-var catNames =['Mobile','PC','Tablet','Headset','Laptop','Watch'] ;
+.categories
+  .row
+    each img,index in images
+      div.col-4
+        +category-box(img,catNames[index])

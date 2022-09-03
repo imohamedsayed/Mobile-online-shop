@@ -1,0 +1,17 @@
+@use "../helpers/variables" as *;
+
+.main-btn {
+  background-color: $skin-color1;
+  color: white;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $skin-color1;
+    border: none;
+    color: #fff;
+    transform: scale(1.2);
+  }
+}
+.back-shop-btn {
+  background-color: transparent !important;
+  color: black !important;
+}

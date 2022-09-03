@@ -1,0 +1,11 @@
+include mixins
+
+.products.mt-3
+  -var myProducts = ['p-1.png','iphone.png','p-2.png','p-3.png','p-4.png','p-5.png','p-6.png'];
+  .row
+    each product in myProducts
+      .col-lg-3.col-md-4.col-6
+        +product-box(product)
+    each product in myProducts
+      .col-lg-3.col-md-4.col-6
+        +product-box(product)

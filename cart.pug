@@ -1,0 +1,36 @@
+include inc/mixins
+doctype
+html(lang='en')
+  head
+    include inc/styles
+    title Cart
+  body
+    +header('Cart')
+    .container.pt-5.pb-5
+      -var myProducts = ['p-1.png','p-4.png','p-5.png','p-6.png'];
+      each prod in myProducts
+        .card.mb-3
+          .row.g-0.align-items-center
+            .col-4
+              img(src='imgs/products/'+prod class='img-fluid')
+            .col-8
+              .card-body
+                .card-text.fw-bold Product Name
+                .card-text.text-muted Electronics
+                .card-text.fw-bold $999.00
+                .closeBtn #[i.fa-solid.fa-xmark]
+                .count
+                  div.minus #[i.fa-solid.fa-minus]
+                  span.text-center.cart-count 1
+                  div.add #[i.fa-solid.fa-plus]
+      .cart-details.mt-5
+        div.mb-4 Subtotal : #[span.totalMoney $4000.00]
+        div Shipping : #[span.shipFee $100.00]
+        div Tax : #[span.taxFee $40.00]
+
+        div.gTotal.d-flex.justify-content-between.mt-4 Ground Total : $4140.00
+          .btn Check out
+    include inc/navigator
+    include inc/scripts
+
+

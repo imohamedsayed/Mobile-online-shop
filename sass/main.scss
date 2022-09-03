@@ -1,0 +1,15 @@
+@use "helpers/mixins" as *;
+@use "helpers/variables" as *;
+@use "layout/header";
+@use "pages/home";
+@use "pages/cart";
+@use "pages/wishlist";
+@use "layout/navigator";
+@use "components/buttons";
+@use "pages/product";
+@use "pages/categories";
+@use "pages/chat";
+body {
+  background-color: #e8eaec;
+  padding-bottom: 100px;
+}

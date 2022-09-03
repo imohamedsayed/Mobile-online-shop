@@ -1,0 +1,37 @@
+include inc/mixins
+doctype
+html(lang='en')
+  head
+    include inc/styles
+    title Product
+  body
+    +header('Product')
+    .container
+      .pro-header 
+        .offer 40% OFF
+        .heartBtn #[i.fa-solid.fa-heart]
+      .product-img
+        .product-overlay
+        img(src='imgs/products/iphone.png' class='img-fluid')
+    .product-details
+      p Rating 4.0 of 5
+      h2 Iphone XS Max 
+      .color
+        p Color
+        .colors 
+          span.bg-dark 
+          span.bg-light 
+          span.bg-warning
+      .qty
+        div QTY
+        .count 
+          div.minus #[i.fa-solid.fa-minus]
+          span.text-center.cart-count 1
+          div.add #[i.fa-solid.fa-plus]
+      .pricing
+        h1 $950.00
+        .btn.main-btn #[i.fa-solid.fa-cart-shopping] Add To Cart 
+
+
+    include inc/navigator
+    include inc/scripts

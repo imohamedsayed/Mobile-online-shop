@@ -1,0 +1,22 @@
+include inc/mixins
+doctype
+html(lang='en')
+  head
+    include inc/styles
+    title Cart
+  body
+    +header('Shop')
+    .searchbox.mt-3.d-flex.container
+      .back-shop-btn #[i.fa-solid.fa-arrow-left]
+      input(type='search',placeholder='Search')
+      div(data-bs-toggle="collapse" href="#options" role="button") #[i(class='fa-solid fa-filter')]
+    .container
+      +options-container
+      include inc/categories
+      div.mt-5
+      include inc/products
+      div.text-center #[.btn.main-btn Load More]
+
+
+  include inc/navigator
+  include inc/scripts

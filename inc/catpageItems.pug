@@ -1,0 +1,19 @@
+include mixins
+-var myProducts = ['p-1.png','iphone.png','p-2.png','p-3.png','p-4.png','p-5.png','p-6.png'];
+each item in myProducts
+  .card-container.ps-4.pe-4
+    .card.mb-3
+      .row.g-0.align-items-center
+        .col-4
+          img(src='imgs/products/'+item width='100' class='img-fluid')
+        .col-8
+          .card-body
+            .card-text.fw-bold Product Name
+            span(style={'color' : 'gold','font-size':'16px'})
+              i(class= "fa-solid fa-star")
+              i(class= "fa-solid fa-star")
+              i(class= "fa-solid fa-star")
+              i(class= "fa-solid fa-star")
+              i(class= "fa-regular fa-star")
+            .card-text.fw-bold $999.00
+            .heatBtn #[i.fa-solid.fa-heart]

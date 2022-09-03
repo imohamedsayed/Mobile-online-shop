@@ -1,0 +1,50 @@
+@use "variables" as *;
+@mixin circling($size) {
+  width: $size;
+  height: $size;
+  padding: 5px;
+  background-color: #ededed;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 1px 1px #c7c7c7;
+}
+
+@mixin priceSpan {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 3px solid $skin-color1;
+}
+@mixin priceSpanBefore($price) {
+  position: absolute;
+  content: "#{$price}";
+  top: -30px;
+  padding: 2px;
+  left: -3px;
+  min-width: 20px;
+  text-align: center;
+  height: 20px;
+  background-color: $skin-color1;
+  color: #fff;
+  display: grid;
+  place-content: center;
+}
+@mixin priceSpanAfter {
+  content: "";
+  position: absolute;
+  border: {
+    width: 5px;
+    color: transparent;
+    style: solid;
+  }
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: $skin-color1;
+}

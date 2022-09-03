@@ -1,0 +1,34 @@
+include inc/mixins
+doctype
+html(lang='en')
+  head
+    include inc/styles
+    title Chat
+  body
+    .container
+      .chat-header
+        .back-btn #[i.fa-solid.fa-arrow-left]
+        .title Live Chat 
+        .user-btn #[i.fa-solid.fa-user]
+
+    .container.pt-5.pb-5
+      .card.mb-5
+        .row.g-0
+          .col-4.text-center
+            img(src='imgs/Logo/online-shop-logo-design-vector.webp' width='120' class='img-fluid rounded-circle')
+          .col-8
+            .card-body
+              .card-title We're Online
+              .card-text Start A Conversation
+      .message-box 
+        p Hi there! You can start asking your question below. I am ready to help
+        p How can I help?
+        span.text-muted 12:00
+    .chat-box
+      div.attachment #[i.fa-solid.fa-paperclip]
+      div.message #[input(type='text' placeholder='Type your message...')]
+      div.send #[i.fa-solid.fa-paper-plane]
+
+    script(src="js/all.min.js") 
+    script(src="js/bootstrap.bundle.min.js")
+    script(src="js/chat.js")

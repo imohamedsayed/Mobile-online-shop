@@ -1,0 +1,15 @@
+include inc/mixins
+doctype
+html(lang='en')
+  head
+    include inc/styles
+    title Orders
+  body
+    +header('WishList')
+    .container.pt-5.pb-5
+      .wish-box
+        -var images = ['p-1.png','p-6.png','p-2.png'];
+        each img in images
+          +wish-box(img)
+    include inc/navigator
+    include inc/scripts
